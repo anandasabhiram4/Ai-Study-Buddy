@@ -31,7 +31,8 @@ if uploaded_file:
                 "Answer: b\n\n"
                 + file_text
             )
-            raw_mcqs = ask_gemini(prompt, "")
+            raw_mcqs = ask_gemini(prompt, file_text)
+
 
         st.session_state.quiz_data = raw_mcqs
         st.session_state.submitted = False
